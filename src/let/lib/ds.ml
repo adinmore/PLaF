@@ -3,9 +3,13 @@
 (* expressed values and environments are defined mutually recursively *)
 
 
+type 'a tree = Empty | Node of 'a * 'a tree * 'a tree
+
 type exp_val =
   | NumVal of int
   | BoolVal of bool
+  | ListVal of exp_val list
+  | TreeVal of exp_val tree
   | PairVal of exp_val*exp_val
   | TupleVal of exp_val list
 type env =
