@@ -3,7 +3,7 @@
 (* expressed values and environments are defined mutually recursively *)
 
 
-type 'a tree = Empty | Node of 'a * 'a * 'a tree
+type 'a tree = Empty | Node of 'a * 'a tree * 'a tree
 
 type exp_val =
   | NumVal of int
